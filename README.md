@@ -2,6 +2,8 @@
 
 An extension that emulates camera effects associated with anamorphic lenses. 
 
+Download this sample scene to demo the extension: https://drive.google.com/file/d/1ZYNbhNenNNl2WTJeKibXuf8S1eJVl4Cy/view?usp=share_link 
+
 ## Adding This Extension
 
 To add this extension to your Omniverse app:
