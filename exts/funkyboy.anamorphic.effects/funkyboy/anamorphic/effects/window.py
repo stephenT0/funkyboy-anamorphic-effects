@@ -24,6 +24,7 @@ class AnamorphicEffectsWindow(ui.Window):
         super().__init__(title, **kwargs, width=375, height=425)
         self.frame.style = julia_modeler_style
         self.frame.set_build_fn(self._build_fn)
+        ui.dock_window_in_window("Anamorphic Effects", "Property", ui.DockPosition.SAME, 0.3)
   
     def destroy(self):
         super().destroy()
@@ -186,14 +187,6 @@ class AnamorphicEffectsWindow(ui.Window):
                                     name="dropdown_menu",
                                     height=10
                                 ).model
-                                with ui.HStack():
-                                    ui.Spacer()  # Keep it on the right side
-                                    with ui.VStack(width=0):  # Need width=0 to keep right-aligned
-                                        ui.Spacer(height=5)
-                                        with ui.ZStack():
-                                            ui.Rectangle(width=15, height=15, name="combobox_icon_cover")
-                                            ui.Image(name="collapsable_closed", width=12, height=12)
-                                    ui.Spacer(width=2)  # Right margin
                             ui.Spacer(width=ui.Percent(10))
 
                         self.combo_sub = combo_model.subscribe_item_changed_fn(combo_changed)
@@ -234,31 +227,37 @@ class AnamorphicEffectsWindow(ui.Window):
                     with ui.VStack(height=0):
                         with ui.HStack():
                             ui.Spacer(width=5)
-                            ui.Label("Anamorphic Bokeh ", height=0, width=0, tooltip="Controls Aniostropy value in Depth of Field Overrides located in the Post Processing menu")                                                
+                            ui.Label("Anamorphic Bokeh", height=0, width=0, tooltip="Controls Aniostropy value in Depth of Field Overrides located in the Post Processing menu")                                                
+                            ui.Spacer(width=8)
                             AnaBokehSliderWidget()
-                            ui.Spacer(width=10)
+
                         with ui.HStack():
                             ui.Spacer(width=5)
                             ui.Label("Lens Flare Intensity", height=0, width=0, tooltip="Controls Sensor Diagonal value in FFT Bloom located in the Post Processing menu")
+                            ui.Spacer(width=4)
                             LFlareSliderWidget()
-                            ui.Spacer(width=10)
+
                         with ui.HStack():
                             ui.Spacer(width=5)
-                            ui.Label("Lens Flare Stretch   ", height=0, width=0, tooltip="Controls Sensor Aspect Ratio value in FFT Bloom located in the Post Processing menu")
+                            ui.Label("Lens Flare Stretch", height=0, width=0, tooltip="Controls Sensor Aspect Ratio value in FFT Bloom located in the Post Processing menu")
+                            ui.Spacer(width=13)
                             FlareStretchSliderWidget()
-                            ui.Spacer(width=10)
+
                         with ui.HStack():
                             ui.Spacer(width=5)
-                            ui.Label("Bloom Intensity        ", height=0, width=0, tooltip="Controls Bloom Intensity value in FFT Bloom located in the Post Processing menu")
+                            ui.Label("Bloom Intensity", height=0, width=0, tooltip="Controls Bloom Intensity value in FFT Bloom located in the Post Processing menu")
+                            ui.Spacer(width=27)
                             BloomIntensitySliderWidget()
-                            ui.Spacer(width=10)
+
                         with ui.HStack():
                             ui.Spacer(width=5)
-                            ui.Label("Lens Blades               ", height=0, width=0, tooltip="Controls Lens Blades value in FFT Bloom located in the Post Processing menu")
+                            ui.Label("Lens Blades", height=0, width=0, tooltip="Controls Lens Blades value in FFT Bloom located in the Post Processing menu")
+                            ui.Spacer(width=49)
                             LensBladesSliderWidget()
-                            ui.Spacer(width=10)
+
                         with ui.HStack():
                             ui.Spacer(width=5)
-                            ui.Label("Blade Rotation          ", height=0, width=0, tooltip="Controls Aperture Rotation value in FFT Bloom located in the Post Processing menu")
+                            ui.Label("Blade Rotation", height=0, width=0, tooltip="Controls Aperture Rotation value in FFT Bloom located in the Post Processing menu")
+                            ui.Spacer(width=34)
                             BladeRotationWidget()
-                            ui.Spacer(width=10)                                                
+                                              

@@ -43,7 +43,7 @@ cl.revert_arrow_disabled = cl(.35, .35, .35, 1.0)
 cl.transparent = cl(0, 0, 0, 0)
 
 fl.main_label_attr_hspacing = 5
-fl.attr_label_v_spacing = 3
+fl.attr_label_v_spacing = 5
 fl.collapsable_group_spacing = 0.5
 fl.outer_frame_padding = 15
 fl.tail_icon_width = 15

@@ -14,7 +14,6 @@ from omni.kit.viewport.window import ViewportWindow
 import omni.ui as ui
 from omni.ui import color as cl
 from omni.ui import constant as fl
-
 from .custom_base_widget import CustomBaseWidget
 
 NUM_FIELD_WIDTH = 500
@@ -1172,7 +1171,7 @@ class CustomRatioSliderWidget(CustomBaseWidget):
                         # perfectly tileable, so that adds some overlap to line up better.
                         with ui.HStack(spacing=-12):
                             
-                            for i in range(50):  # tiling the texture
+                            for i in range(5):  # tiling the texture
                                 ui.Image(name=TEXTURE_NAME,
                                          fill_policy=ui.FillPolicy.PRESERVE_ASPECT_CROP,
                                          width=50,)
